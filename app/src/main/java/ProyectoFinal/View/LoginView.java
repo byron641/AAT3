@@ -189,8 +189,9 @@ public class LoginView extends javax.swing.JFrame {
                 break;
         }
         
-        MenuView menuview = new MenuView();
-        menuview.setVisible(true);        
+        MenuView2 menuview = new MenuView2();
+        menuview.setVisible(true);
+        
         String UserNull = "", PassNull = "";
         TxfPass.setText(PassNull);
         TxfUser.setText(UserNull);
