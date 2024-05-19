@@ -185,11 +185,13 @@ public class MenuView2 extends javax.swing.JFrame {
     private void BtnVisualizarNotasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnVisualizarNotasActionPerformed
         VisualizarAlumnosView visualizaralumnosview = new VisualizarAlumnosView();
         visualizaralumnosview.setVisible(true);
+        dispose();
     }//GEN-LAST:event_BtnVisualizarNotasActionPerformed
 
     private void BtnIngresarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnIngresarAlumnoActionPerformed
         IngresarAlumnoView ingresaralumnoview = new IngresarAlumnoView();
         ingresaralumnoview.setVisible(true);
+        dispose();
     }//GEN-LAST:event_BtnIngresarAlumnoActionPerformed
 
     private void BtnIngresarNotasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnIngresarNotasActionPerformed
@@ -200,11 +202,13 @@ public class MenuView2 extends javax.swing.JFrame {
     private void BtnEditarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEditarAlumnoActionPerformed
         ModificarAlumnoView modificaralumnoview = new ModificarAlumnoView();
         modificaralumnoview.setVisible(true);
+        dispose();
     }//GEN-LAST:event_BtnEditarAlumnoActionPerformed
 
     private void BtnIngresarNotas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnIngresarNotas1ActionPerformed
         EliminarAlumnoView2 eliminaralumnoview = new EliminarAlumnoView2();
         eliminaralumnoview.setVisible(true);
+        dispose();
     }//GEN-LAST:event_BtnIngresarNotas1ActionPerformed
 
     /**
