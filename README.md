@@ -90,4 +90,11 @@ CREATE PROCEDURE ListarAlumnos()
 
 SELECT * FROM alumno;
 SELECT * FROM Alumno;
+
+INSERT INTO login (NombreLogin, ContrasenaLogin, tipoUsuario)
+VALUES ('byron641', 'Guatemala.2024', 1); 
+
+INSERT INTO Alumno (NombreAlumno, ApellidoAlumno, ClaveAlumno)
+VALUES ('Jose', 'Perez', 1);
+	
 ```

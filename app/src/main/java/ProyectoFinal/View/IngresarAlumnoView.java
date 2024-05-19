@@ -59,6 +59,11 @@ public class IngresarAlumnoView extends javax.swing.JFrame {
         BtnLimpiarAlumno.setText("Borrar");
 
         BtnSalirAlumno.setText("Salir");
+        BtnSalirAlumno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnSalirAlumnoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -155,6 +160,12 @@ public class IngresarAlumnoView extends javax.swing.JFrame {
         this.TxfApellidoAlumno.setText("");
         this.TxfClaveAlumno.setText("");
     }//GEN-LAST:event_BtnGuardarAlumnoActionPerformed
+
+    private void BtnSalirAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSalirAlumnoActionPerformed
+        MenuView2 menuview = new MenuView2();
+        menuview.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_BtnSalirAlumnoActionPerformed
 
     /**
      * @param args the command line arguments

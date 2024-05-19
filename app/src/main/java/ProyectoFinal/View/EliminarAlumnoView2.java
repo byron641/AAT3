@@ -11,17 +11,18 @@ import java.awt.event.ActionListener;
 import java.util.List;
 import javax.swing.JOptionPane;
 
+
 /**
  *
  * @author byron
  */
-public class ModificarAlumnoView extends javax.swing.JFrame {
+public class EliminarAlumnoView2 extends javax.swing.JFrame {
     private ModificarAlumnoControlador controlador; 
-
+    
     /**
      * Creates new form ModificarAlumnoView
      */
-    public ModificarAlumnoView() {
+    public EliminarAlumnoView2() {
         initComponents();
         controlador = new ModificarAlumnoControlador(); 
         cargarAlumnos();
@@ -41,7 +42,8 @@ public class ModificarAlumnoView extends javax.swing.JFrame {
     
  private void cargarAlumnos() {
     List<ModificarAlumnoModel> alumnos = controlador.leerAlumnos();
-        System.out.println("Cantidad de alumnos: " + alumnos.size());
+    
+    System.out.println("Cantidad de alumnos: " + alumnos.size());
     
     JcbAlumno.removeAllItems();
     
@@ -68,11 +70,13 @@ public class ModificarAlumnoView extends javax.swing.JFrame {
         TxfModificarClave.setText("");
     }
 
-    private void mostrarDatosAlumno(ModificarAlumnoModel alumno) {
-        TxfModificarAlumno.setText(alumno.getNombreAlumno());
-        TxfModificarApellido.setText(alumno.getApellidoAlumno());
-        TxfModificarClave.setText(String.valueOf(alumno.getClaveAlumno()));
-    }
+private void eliminarAlumno(int clave) {
+    ModificarAlumnoModel modelo = new ModificarAlumnoModel(); 
+    String mensaje = modelo.eliminarAlumno(clave); 
+    JOptionPane.showMessageDialog(null, mensaje, "Información", JOptionPane.INFORMATION_MESSAGE);
+    cargarAlumnos();
+    limpiarCampos();
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -90,8 +94,7 @@ public class ModificarAlumnoView extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        BtnActualizarAlumno = new javax.swing.JButton();
-        BtnLimpiar = new javax.swing.JButton();
+        BtnEliminarAlumno = new javax.swing.JButton();
         BtnSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -104,14 +107,12 @@ public class ModificarAlumnoView extends javax.swing.JFrame {
 
         jLabel3.setText("Clave:");
 
-        BtnActualizarAlumno.setText("Actualizar");
-        BtnActualizarAlumno.addActionListener(new java.awt.event.ActionListener() {
+        BtnEliminarAlumno.setText("Eliminar Alumno");
+        BtnEliminarAlumno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnActualizarAlumnoActionPerformed(evt);
+                BtnEliminarAlumnoActionPerformed(evt);
             }
         });
-
-        BtnLimpiar.setText("Borrar");
 
         BtnSalir.setText("Salir");
         BtnSalir.addActionListener(new java.awt.event.ActionListener() {
@@ -124,27 +125,26 @@ public class ModificarAlumnoView extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(JcbAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                .addComponent(BtnActualizarAlumno)
-                .addGap(18, 18, 18)
-                .addComponent(BtnLimpiar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(BtnSalir)
-                .addGap(21, 21, 21))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3))
-                .addGap(46, 46, 46)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(TxfModificarApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TxfModificarClave, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TxfModificarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(BtnEliminarAlumno)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(BtnSalir))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3))
+                        .addGap(46, 46, 46)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(TxfModificarApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TxfModificarClave, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TxfModificarAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(41, 41, 41))
         );
         jPanel1Layout.setVerticalGroup(
@@ -169,8 +169,7 @@ public class ModificarAlumnoView extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(41, 41, 41)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(BtnActualizarAlumno)
-                            .addComponent(BtnLimpiar)
+                            .addComponent(BtnEliminarAlumno)
                             .addComponent(BtnSalir))))
                 .addGap(45, 45, 45))
         );
@@ -189,15 +188,14 @@ public class ModificarAlumnoView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BtnActualizarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnActualizarAlumnoActionPerformed
-        String nombre = TxfModificarAlumno.getText();
-        String apellido = TxfModificarApellido.getText();
-        int clave = Integer.parseInt(TxfModificarClave.getText());
-        String mensaje = controlador.actualizarAlumno(clave, nombre, apellido);
-        JOptionPane.showMessageDialog(null, mensaje, "Información", JOptionPane.INFORMATION_MESSAGE);
-        cargarAlumnos();
-        limpiarCampos();
-    }//GEN-LAST:event_BtnActualizarAlumnoActionPerformed
+    private void BtnEliminarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEliminarAlumnoActionPerformed
+        if (JcbAlumno.getSelectedItem() != null) {
+        String seleccionado = JcbAlumno.getSelectedItem().toString();
+        String[] partes = seleccionado.split(" - ");
+        int clave = Integer.parseInt(partes[0]);
+        eliminarAlumno(clave);
+    }
+    }//GEN-LAST:event_BtnEliminarAlumnoActionPerformed
 
     private void BtnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSalirActionPerformed
         MenuView2 menuview = new MenuView2();
@@ -205,6 +203,7 @@ public class ModificarAlumnoView extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_BtnSalirActionPerformed
 
+   
     /**
      * @param args the command line arguments
      */
@@ -222,27 +221,27 @@ public class ModificarAlumnoView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ModificarAlumnoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EliminarAlumnoView2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ModificarAlumnoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EliminarAlumnoView2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ModificarAlumnoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EliminarAlumnoView2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ModificarAlumnoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EliminarAlumnoView2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ModificarAlumnoView().setVisible(true);
+                new EliminarAlumnoView2().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtnActualizarAlumno;
-    private javax.swing.JButton BtnLimpiar;
+    private javax.swing.JButton BtnEliminarAlumno;
     private javax.swing.JButton BtnSalir;
     private javax.swing.JComboBox<String> JcbAlumno;
     private javax.swing.JTextField TxfModificarAlumno;

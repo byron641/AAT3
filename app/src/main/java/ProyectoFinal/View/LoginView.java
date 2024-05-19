@@ -197,7 +197,6 @@ public class LoginView extends javax.swing.JFrame {
         TxfUser.setText(UserNull);
         dispose();
     } else {
-        // Mensaje de error de login
         JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrectos", "Error de inicio de sesión", JOptionPane.ERROR_MESSAGE);
     }
 

@@ -75,7 +75,7 @@ public class ModificarAlumnoModel {
         List<ModificarAlumnoModel> alumnos = new ArrayList<>();
         if (cx != null) {
             try {
-                String SPLeerAlumnos = "{call LeerAlumno()}"; // Reemplaza 'LeerAlumnos()' por el nombre correcto de tu procedimiento almacenado
+                String SPLeerAlumnos = "{call LeerAlumno()}"; 
                 CallableStatement statement = cx.prepareCall(SPLeerAlumnos);
                 ResultSet rs = statement.executeQuery();
 
@@ -87,7 +87,6 @@ public class ModificarAlumnoModel {
                     alumnos.add(alumno);
                 }
             } catch (SQLException ex) {
-                // Manejo de errores
                 System.err.println("Error al leer alumnos: " + ex.getMessage());
             } finally {
                 conexion.desconectar();
@@ -95,4 +94,24 @@ public class ModificarAlumnoModel {
         }
         return alumnos;
     }
+
+public String eliminarAlumno(int clave) {
+    Connection cx = conexion.ConectarBD();
+    if (cx != null) {
+        try {
+            String SPEliminarAlumno = "{call EliminarAlumno(?)}";
+            CallableStatement statement = cx.prepareCall(SPEliminarAlumno);
+            statement.setInt(1, clave);
+            statement.execute();
+            return "El alumno se eliminó con éxito";
+        } catch (SQLException ex) {
+            return "Error al eliminar alumno: " + ex.getMessage();
+        } finally {
+            conexion.desconectar();
+        }
+    } else {
+        return "No se pudo conectar a la base de datos";
+    }
+}
+    
 }
