@@ -2,6 +2,14 @@
 
 Proyecto Final de Actividad de Aprendizaje de Trabajo AAT3.
 
+LoginView (Funcionado)
+
+![LoginView](https://github.com/byron641/AAT3/blob/main/app/src/main/resources/LoginView.png)
+
+MenuView (Funcionado) (Fallando Actualmente)
+
+![MenuView](https://github.com/byron641/AAT3/blob/main/app/src/main/resources/MenuView.png)
+
 codigo para WorkBench 
 
 ```
