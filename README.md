@@ -32,7 +32,33 @@ Eliminar Alumno
 
 ![Eliminiar Alumno](https://github.com/byron641/AAT3/blob/main/app/src/main/resources/Elimina%20Alumno.png)
 
+Lines Count made Cloc by AlDanial 
 
+https://github.com/AlDanial/cloc
+
+```
+      47 text files.
+      41 unique files.
+     136 files ignored.
+
+github.com/AlDanial/cloc v 2.00  T=0.88 s (46.7 files/s, 5413.0 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Java                            21            331            408           1814
+XML                              8             31              0           1127
+Bourne Shell                     2             56            232            209
+DOS Batch                        2             42              4            138
+Markdown                         1             36              0             88
+Text                             1             13              0             64
+SQL                              1             17              5             63
+Gradle                           2             11             21             28
+Properties                       2              0              1              8
+TOML                             1              2              2              6
+-------------------------------------------------------------------------------
+SUM:                            41            539            673           3545
+-------------------------------------------------------------------------------
+```
 
 codigo para WorkBench 
 
@@ -122,3 +148,4 @@ INSERT INTO Alumno (NombreAlumno, ApellidoAlumno, ClaveAlumno)
 VALUES ('Jose', 'Perez', 1);
 	
 ```
+
