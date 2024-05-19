@@ -50,24 +50,24 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jButton5" max="32767" attributes="0"/>
-                              <Component id="jButton7" pref="118" max="32767" attributes="0"/>
+                              <Component id="BtnIngresarNotas" max="32767" attributes="0"/>
+                              <Component id="BtnVisualizarNotas" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jButton6" max="32767" attributes="0"/>
+                              <Component id="BtnModificarNotas" max="32767" attributes="0"/>
                               <Component id="BtnLogout" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jButton3" max="32767" attributes="0"/>
-                              <Component id="jButton1" max="32767" attributes="0"/>
+                              <Component id="BtnIngresarAlumno" max="32767" attributes="0"/>
+                              <Component id="BtnIngresarMaestro" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jButton4" pref="116" max="32767" attributes="0"/>
-                              <Component id="jButton2" max="32767" attributes="0"/>
+                              <Component id="BtnEditarAlumno" pref="116" max="32767" attributes="0"/>
+                              <Component id="BtnEditarMaestro" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -81,22 +81,22 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="BtnIngresarMaestro" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="BtnEditarMaestro" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="BtnIngresarAlumno" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="BtnEditarAlumno" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="BtnIngresarNotas" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="BtnModificarNotas" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="BtnVisualizarNotas" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="BtnLogout" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="79" max="32767" attributes="0"/>
@@ -113,51 +113,51 @@
             <Property name="text" type="java.lang.String" value="jLabel1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="BtnIngresarMaestro">
           <Properties>
             <Property name="text" type="java.lang.String" value="Ingresar Maestro"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="BtnEditarMaestro">
           <Properties>
             <Property name="text" type="java.lang.String" value="Editar Maestro"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton3">
+        <Component class="javax.swing.JButton" name="BtnIngresarAlumno">
           <Properties>
             <Property name="text" type="java.lang.String" value="Ingresar Alumno"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnIngresarAlumnoActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton4">
+        <Component class="javax.swing.JButton" name="BtnEditarAlumno">
           <Properties>
             <Property name="text" type="java.lang.String" value="Editar Alumno"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton5">
+        <Component class="javax.swing.JButton" name="BtnIngresarNotas">
           <Properties>
             <Property name="text" type="java.lang.String" value="Ingresar Notas"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnIngresarNotasActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton6">
+        <Component class="javax.swing.JButton" name="BtnModificarNotas">
           <Properties>
             <Property name="text" type="java.lang.String" value="Modificar Notas"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton6ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnModificarNotasActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton7">
+        <Component class="javax.swing.JButton" name="BtnVisualizarNotas">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Visualizar Notas"/>
+            <Property name="text" type="java.lang.String" value="Visualizar Alumnos"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton7ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnVisualizarNotasActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="BtnLogout">

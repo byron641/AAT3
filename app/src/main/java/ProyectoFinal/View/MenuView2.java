@@ -28,13 +28,13 @@ public class MenuView2 extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        BtnIngresarMaestro = new javax.swing.JButton();
+        BtnEditarMaestro = new javax.swing.JButton();
+        BtnIngresarAlumno = new javax.swing.JButton();
+        BtnEditarAlumno = new javax.swing.JButton();
+        BtnIngresarNotas = new javax.swing.JButton();
+        BtnModificarNotas = new javax.swing.JButton();
+        BtnVisualizarNotas = new javax.swing.JButton();
         BtnLogout = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -45,37 +45,37 @@ public class MenuView2 extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuView.png"))); // NOI18N
         jLabel1.setText("jLabel1");
 
-        jButton1.setText("Ingresar Maestro");
+        BtnIngresarMaestro.setText("Ingresar Maestro");
 
-        jButton2.setText("Editar Maestro");
+        BtnEditarMaestro.setText("Editar Maestro");
 
-        jButton3.setText("Ingresar Alumno");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        BtnIngresarAlumno.setText("Ingresar Alumno");
+        BtnIngresarAlumno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                BtnIngresarAlumnoActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Editar Alumno");
+        BtnEditarAlumno.setText("Editar Alumno");
 
-        jButton5.setText("Ingresar Notas");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        BtnIngresarNotas.setText("Ingresar Notas");
+        BtnIngresarNotas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                BtnIngresarNotasActionPerformed(evt);
             }
         });
 
-        jButton6.setText("Modificar Notas");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        BtnModificarNotas.setText("Modificar Notas");
+        BtnModificarNotas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                BtnModificarNotasActionPerformed(evt);
             }
         });
 
-        jButton7.setText("Visualizar Notas");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        BtnVisualizarNotas.setText("Visualizar Alumnos");
+        BtnVisualizarNotas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                BtnVisualizarNotasActionPerformed(evt);
             }
         });
 
@@ -96,20 +96,20 @@ public class MenuView2 extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE))
+                            .addComponent(BtnIngresarNotas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(BtnVisualizarNotas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(16, 16, 16)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(BtnModificarNotas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(BtnLogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(BtnIngresarAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(BtnIngresarMaestro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(BtnEditarAlumno, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                            .addComponent(BtnEditarMaestro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(29, 29, 29))
         );
         jPanel1Layout.setVerticalGroup(
@@ -118,19 +118,19 @@ public class MenuView2 extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(55, 55, 55)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(BtnIngresarMaestro)
+                    .addComponent(BtnEditarMaestro))
                 .addGap(42, 42, 42)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
+                    .addComponent(BtnIngresarAlumno)
+                    .addComponent(BtnEditarAlumno))
                 .addGap(45, 45, 45)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
-                    .addComponent(jButton6))
+                    .addComponent(BtnIngresarNotas)
+                    .addComponent(BtnModificarNotas))
                 .addGap(40, 40, 40)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton7)
+                    .addComponent(BtnVisualizarNotas)
                     .addComponent(BtnLogout))
                 .addContainerGap(79, Short.MAX_VALUE))
         );
@@ -156,25 +156,25 @@ public class MenuView2 extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_BtnLogoutActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void BtnModificarNotasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnModificarNotasActionPerformed
          ModificarNotaView modificarview = new ModificarNotaView();
          modificarview.setVisible(true);
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_BtnModificarNotasActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        VisualizarNotaView visualizarview = new VisualizarNotaView();
-        visualizarview.setVisible(true);
-    }//GEN-LAST:event_jButton7ActionPerformed
+    private void BtnVisualizarNotasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnVisualizarNotasActionPerformed
+        VisualizarAlumnosView visualizaralumnosview = new VisualizarAlumnosView();
+        visualizaralumnosview.setVisible(true);
+    }//GEN-LAST:event_BtnVisualizarNotasActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void BtnIngresarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnIngresarAlumnoActionPerformed
         IngresarAlumnoView ingresaralumnoview = new IngresarAlumnoView();
         ingresaralumnoview.setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_BtnIngresarAlumnoActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void BtnIngresarNotasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnIngresarNotasActionPerformed
         IngresarNotaView ingresarview = new IngresarNotaView();
         ingresarview.setVisible(true);
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_BtnIngresarNotasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -212,14 +212,14 @@ public class MenuView2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnEditarAlumno;
+    private javax.swing.JButton BtnEditarMaestro;
+    private javax.swing.JButton BtnIngresarAlumno;
+    private javax.swing.JButton BtnIngresarMaestro;
+    private javax.swing.JButton BtnIngresarNotas;
     private javax.swing.JButton BtnLogout;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
+    private javax.swing.JButton BtnModificarNotas;
+    private javax.swing.JButton BtnVisualizarNotas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

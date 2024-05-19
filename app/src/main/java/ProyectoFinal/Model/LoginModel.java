@@ -51,7 +51,7 @@ public class LoginModel {
     }
 
     public Usuario verificarCredenciales(String nombreUsuario, String contrasena) throws SQLException {
-        Connection cx = conexion.conectar();
+        Connection cx = conexion.ConectarBD();
         if (cx != null) {
             try {
                 String SPVerificarCredenciales = "{call SPVerificarCredenciales(?, ?)}";

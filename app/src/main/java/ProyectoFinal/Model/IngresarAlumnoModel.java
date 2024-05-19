@@ -47,7 +47,7 @@ public class IngresarAlumnoModel {
     }
 
     public String insertarAlumno(IngresarAlumnoModel alumno) {
-        Connection cx = conexion.conectar();
+        Connection cx = conexion.ConectarBD();
         if (cx != null) {
             try {
                 String SPInsertarAlumno = "{call InsertarAlumno(?, ?, ?)}";

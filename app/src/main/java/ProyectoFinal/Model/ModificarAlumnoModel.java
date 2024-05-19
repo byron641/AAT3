@@ -49,7 +49,7 @@ public class ModificarAlumnoModel {
     }
 
 public List<ModificarAlumnoModel> leerAlumnos() {
-        Connection cx = conexion.conectar();
+        Connection cx = conexion.ConectarBD();
         List<ModificarAlumnoModel> alumnos = new ArrayList<>();
         if (cx != null) {
             try {
@@ -67,7 +67,7 @@ public List<ModificarAlumnoModel> leerAlumnos() {
     }
 
     public String actualizarAlumno(ModificarAlumnoModel alumno) {
-        Connection cx = conexion.conectar();
+        Connection cx = conexion.ConectarBD();
         if (cx != null) {
             try {
                 String SPActualizarAlumno = "{call ActualizarAlumno(?, ?, ?)}";

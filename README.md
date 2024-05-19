@@ -6,7 +6,7 @@ LoginView (Funcionado)
 
 ![LoginView](https://github.com/byron641/AAT3/blob/main/app/src/main/resources/LoginView.png)
 
-MenuView (Funcionado) (Fallando Actualmente)
+MenuView (Funcionado) 
 
 ![MenuView](https://github.com/byron641/AAT3/blob/main/app/src/main/resources/MenuView.png)
 
