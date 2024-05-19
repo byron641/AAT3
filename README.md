@@ -10,6 +10,30 @@ MenuView (Funcionado)
 
 ![MenuView](https://github.com/byron641/AAT3/blob/main/app/src/main/resources/MenuView.png)
 
+Ingresar Alumno (Funcionado, UI/UX WIP) 
+
+![Ingresar Alumno](https://github.com/byron641/AAT3/blob/main/app/src/main/resources/Ingresar%20Alumno.png)
+
+Modificar Alumno
+
+(Funcionado, UI/UX WIP) 
+
+![Ingresar Alumno](https://github.com/byron641/AAT3/blob/main/app/src/main/resources/Modificar%20Alumno.png)
+
+Ver Alumnos
+
+(Funcionado, UI/UX WIP) 
+
+![Ver Alumno](https://github.com/byron641/AAT3/blob/main/app/src/main/resources/Ver%20Alumno.png)
+
+Eliminar Alumno
+
+(Funcionado, Falta agregar boton de confirmar Eliminar Alumno, UI/UX WIP) 
+
+![Eliminiar Alumno](https://github.com/byron641/AAT3/blob/main/app/src/main/resources/Elimina%20Alumno.png)
+
+
+
 codigo para WorkBench 
 
 ```
