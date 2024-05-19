@@ -6,6 +6,8 @@ package ProyectoFinal.View;
 
 import ProyectoFinal.Controller.ModificarAlumnoControlador;
 import ProyectoFinal.Model.ModificarAlumnoModel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.List;
 import javax.swing.JOptionPane;
 
@@ -23,7 +25,20 @@ public class ModificarAlumnoView extends javax.swing.JFrame {
         initComponents();
         controlador = new ModificarAlumnoControlador(); 
         cargarAlumnos();
-    }
+         JcbAlumno.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (JcbAlumno.getSelectedItem() != null) {
+                    String seleccionado = JcbAlumno.getSelectedItem().toString();
+                    String[] partes = seleccionado.split(" - ");
+                    int clave = Integer.parseInt(partes[0]); 
+                    cargarDatosAlumno(clave);
+                }
+            }
+         });
+}
+                 
+    
  private void cargarAlumnos() {
     List<ModificarAlumnoModel> alumnos = controlador.leerAlumnos();
     
@@ -37,6 +52,18 @@ public class ModificarAlumnoView extends javax.swing.JFrame {
     }
 }
  
+ private void cargarDatosAlumno(int clave) {
+        ModificarAlumnoModel alumno = controlador.cargarDatosAlumno(clave);
+        if (alumno != null) {
+            TxfModificarAlumno.setText(alumno.getNombreAlumno());
+            TxfModificarApellido.setText(alumno.getApellidoAlumno());
+            TxfModificarClave.setText(String.valueOf(alumno.getClaveAlumno()));
+        } else {
+            // Si no se encuentra el alumno, limpiar los campos de texto
+            limpiarCampos();
+            JOptionPane.showMessageDialog(null, "Alumno no encontrado", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+ }
 
     private void limpiarCampos() {
         TxfModificarAlumno.setText("");

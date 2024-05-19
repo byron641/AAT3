@@ -6,6 +6,7 @@ package ProyectoFinal.Model;
 
 import java.sql.Connection;
 import java.sql.CallableStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -48,33 +49,15 @@ public class ModificarAlumnoModel {
         this.claveAlumno = claveAlumno;
     }
 
-public List<ModificarAlumnoModel> leerAlumnos() {
-        Connection cx = conexion.ConectarBD();
-        List<ModificarAlumnoModel> alumnos = new ArrayList<>();
-        if (cx != null) {
-            try {
-                String SPLeerAlumno = "{call LeerAlumno()}";
-                CallableStatement statement = cx.prepareCall(SPLeerAlumno);
-
-            } catch (SQLException ex) {
-                // Manejo de errores
-                System.err.println("Error al leer alumnos: " + ex.getMessage());
-            } finally {
-                conexion.desconectar();
-            }
-        }
-        return alumnos;
-    }
-
-    public String actualizarAlumno(ModificarAlumnoModel alumno) {
+    public String actualizarAlumno(int clave, String nombre, String apellido) {
         Connection cx = conexion.ConectarBD();
         if (cx != null) {
             try {
                 String SPActualizarAlumno = "{call ActualizarAlumno(?, ?, ?)}";
                 CallableStatement statement = cx.prepareCall(SPActualizarAlumno);
-                statement.setInt(1, alumno.getClaveAlumno());
-                statement.setString(2, alumno.getNombreAlumno());
-                statement.setString(3, alumno.getApellidoAlumno());
+                statement.setInt(1, clave);
+                statement.setString(2, nombre);
+                statement.setString(3, apellido);
                 statement.execute();
                 return "El alumno se actualizó con éxito";
             } catch (SQLException ex) {
@@ -86,6 +69,30 @@ public List<ModificarAlumnoModel> leerAlumnos() {
             return "No se pudo conectar a la base de datos";
         }
     }
-   
-    
+
+    public List<ModificarAlumnoModel> leerAlumnos() {
+        Connection cx = conexion.ConectarBD();
+        List<ModificarAlumnoModel> alumnos = new ArrayList<>();
+        if (cx != null) {
+            try {
+                String SPLeerAlumnos = "{call LeerAlumno()}"; // Reemplaza 'LeerAlumnos()' por el nombre correcto de tu procedimiento almacenado
+                CallableStatement statement = cx.prepareCall(SPLeerAlumnos);
+                ResultSet rs = statement.executeQuery();
+
+                while (rs.next()) {
+                    ModificarAlumnoModel alumno = new ModificarAlumnoModel();
+                    alumno.setClaveAlumno(rs.getInt("ClaveAlumno"));
+                    alumno.setNombreAlumno(rs.getString("NombreAlumno"));
+                    alumno.setApellidoAlumno(rs.getString("ApellidoAlumno"));
+                    alumnos.add(alumno);
+                }
+            } catch (SQLException ex) {
+                // Manejo de errores
+                System.err.println("Error al leer alumnos: " + ex.getMessage());
+            } finally {
+                conexion.desconectar();
+            }
+        }
+        return alumnos;
+    }
 }

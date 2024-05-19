@@ -66,7 +66,8 @@ VALUES (NombreAlumno, ApellidoAlumno, ClaveAlumno);
 
 --
 CREATE PROCEDURE LeerAlumno()
-    SELECT * FROM Alumno;
+    SELECT ClaveAlumno, NombreAlumno, ApellidoAlumno FROM alumno;
+
     
 --
 CREATE PROCEDURE ActualizarAlumno(
@@ -84,5 +85,9 @@ CREATE PROCEDURE EliminarAlumno(
 )
     DELETE FROM Alumno WHERE ClaveAlumno = pClaveAlumno;
 
+CREATE PROCEDURE ListarAlumnos()
+	SELECT IdAlumno, NombreAlumno, ApellidoAlumno, ClaveAlumno from alumno;
+
 SELECT * FROM alumno;
+SELECT * FROM Alumno;
 ```

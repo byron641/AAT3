@@ -38,7 +38,6 @@ public class ModificarAlumnoControlador {
         modelo.setClaveAlumno(claveAlumno);
         modelo.setNombreAlumno(nombreAlumno);
         modelo.setApellidoAlumno(apellidoAlumno);
-        return modelo.actualizarAlumno(modelo);
+        return modelo.actualizarAlumno(claveAlumno, nombreAlumno, apellidoAlumno); // Pasa los argumentos requeridos
     }
 }
-

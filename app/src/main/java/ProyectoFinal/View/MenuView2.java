@@ -57,6 +57,11 @@ public class MenuView2 extends javax.swing.JFrame {
         });
 
         BtnEditarAlumno.setText("Editar Alumno");
+        BtnEditarAlumno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnEditarAlumnoActionPerformed(evt);
+            }
+        });
 
         BtnIngresarNotas.setText("Ingresar Notas");
         BtnIngresarNotas.addActionListener(new java.awt.event.ActionListener() {
@@ -175,6 +180,11 @@ public class MenuView2 extends javax.swing.JFrame {
         IngresarNotaView ingresarview = new IngresarNotaView();
         ingresarview.setVisible(true);
     }//GEN-LAST:event_BtnIngresarNotasActionPerformed
+
+    private void BtnEditarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEditarAlumnoActionPerformed
+        ModificarAlumnoView modificaralumnoview = new ModificarAlumnoView();
+        modificaralumnoview.setVisible(true);
+    }//GEN-LAST:event_BtnEditarAlumnoActionPerformed
 
     /**
      * @param args the command line arguments
